@@ -23,7 +23,7 @@ export default function CTA() {
                 onSubmit={(e) => {
                   e.preventDefault()
                   const data = new FormData(e.currentTarget)
-                  const params = new URLSearchParams(data as any)
+                  const params = new URLSearchParams(data)
                   window.location.href = `mailto:hello@cellforge.bio?subject=Cell%20Forge%20Demo%20Request&body=${encodeURIComponent(params.toString())}`
                 }}
               >
