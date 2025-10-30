@@ -1,0 +1,253 @@
+{
+  "product": {
+    "name": "Cell Forge Landing Page",
+    "version": "1.0.0",
+    "brand": {
+      "title": "CELL FORGE",
+      "tagline": "Biomanufacturing Reinvented",
+      "primaryColors": [
+        "#111827",
+        "#ec4899",
+        "#f43f5e",
+        "#2563eb"
+      ],
+      "typography": {
+        "heading": "Inter/Geist, 700-800 weight",
+        "body": "Inter/Geist, 400-600 weight"
+      }
+    },
+    "routes": {
+      "anchors": ["#features", "#contact"]
+    }
+  },
+  "assets": {
+    "splineHero": {
+      "provider": "@splinetool/react-spline",
+      "sceneUrl": "https://prod.spline.design/LU2mWMPbF3Qi1Qxh/scene.splinecode",
+      "container": {
+        "height": "88vh",
+        "width": "100%",
+        "overflow": "hidden"
+      },
+      "props": {
+        "style": {
+          "width": "100%",
+          "height": "100%"
+        }
+      },
+      "overlays": [
+        {
+          "type": "gradient",
+          "classes": [
+            "bg-gradient-to-b",
+            "from-white/40",
+            "via-white/0",
+            "to-white/80",
+            "pointer-events-none"
+          ]
+        },
+        {
+          "type": "radial-highlight",
+          "classes": [
+            "bg-[radial-gradient(circle_at_center,rgba(236,72,153,0.18),transparent_60%)]",
+            "pointer-events-none"
+          ]
+        }
+      ],
+      "constraints": [
+        "Do not use negative z-index on Spline container",
+        "Keep overlays pointer-events-none"
+      ]
+    },
+    "icons": [
+      { "name": "Dna", "package": "lucide-react", "usage": "brand mark in header" },
+      { "name": "FlaskConical", "package": "lucide-react", "usage": "feature: Recombinant at scale" },
+      { "name": "ShieldCheck", "package": "lucide-react", "usage": "feature: Endotoxin-free by design" },
+      { "name": "Microscope", "package": "lucide-react", "usage": "feature: Ciliate-powered purity" },
+      { "name": "Leaf", "package": "lucide-react", "usage": "feature: 100% animal-free" }
+    ]
+  },
+  "layout": {
+    "container": {
+      "maxWidth": "7xl",
+      "paddingX": {
+        "base": 4,
+        "sm": 6,
+        "lg": 8
+      }
+    },
+    "sections": [
+      {
+        "id": "navbar",
+        "purpose": "Branding, global navigation, primary CTA",
+        "structure": [
+          "left: brand mark + title + tagline",
+          "right (md+): nav links + primary CTA"
+        ],
+        "height": 64,
+        "behavior": {
+          "sticky": true,
+          "backdropBlur": true,
+          "background": "translucent white with border"
+        },
+        "links": [
+          { "label": "Technology", "href": "#features" },
+          { "label": "Benefits", "href": "#features" },
+          { "label": "Contact", "href": "#contact" },
+          { "label": "Request a Demo", "href": "#contact", "variant": "primary" }
+        ],
+        "states": {
+          "hover": {
+            "brandTagline": "gradient text on hover",
+            "links": "text-gray-900"
+          }
+        },
+        "accessibility": {
+          "landmark": "header",
+          "focus": "visible focus states on links and CTA"
+        }
+      },
+      {
+        "id": "hero",
+        "purpose": "Immediate value proposition with immersive 3D visual",
+        "copy": {
+          "eyebrow": "100% animal-free • Endotoxin-free • Ciliate-powered",
+          "headlineGradient": "Forge the future of proteins",
+          "headlineContinuation": "with living micro-factories.",
+          "supporting": "We biomanufacture recombinant proteins using advanced ciliate systems—delivering purity, performance, and scalability without animals or endotoxins."
+        },
+        "ctas": [
+          { "label": "Request a pilot run", "href": "#contact", "variant": "primary" },
+          { "label": "Explore the platform", "href": "#features", "variant": "secondary" }
+        ],
+        "animation": {
+          "type": "spline-3d",
+          "role": "ambient interactive background",
+          "interactions": "allow pointer interaction; content overlays do not block"
+        },
+        "responsiveness": {
+          "headline": { "sizes": { "base": "text-5xl", "sm": "text-6xl" } },
+          "layout": "content centered vertically, max copy width 3xl"
+        }
+      },
+      {
+        "id": "features",
+        "purpose": "Articulate key differentiators and benefits",
+        "grid": {
+          "columns": { "base": 1, "sm": 2, "lg": 4 },
+          "card": {
+            "hover": "elevate shadow, reveal soft gradient background",
+            "border": "subtle gray-100",
+            "radius": "2xl"
+          }
+        },
+        "items": [
+          {
+            "title": "Recombinant at scale",
+            "description": "High-yield expression with precise control, optimized in ciliate hosts built for productivity.",
+            "icon": "FlaskConical"
+          },
+          {
+            "title": "Endotoxin-free by design",
+            "description": "Bacteria-free biology eliminates endotoxin risk for cleaner downstream and safer therapeutics.",
+            "icon": "ShieldCheck"
+          },
+          {
+            "title": "Ciliate-powered purity",
+            "description": "Eukaryotic folding and secretion pathways produce proteins with superior fidelity.",
+            "icon": "Microscope"
+          },
+          {
+            "title": "100% animal-free",
+            "description": "No animal inputs. Sustainable, ethical, and regulation-forward manufacturing.",
+            "icon": "Leaf"
+          }
+        ],
+        "supplement": {
+          "title": "Why ciliates?",
+          "bullets": [
+            "Superior folding and secretion fidelity",
+            "Built-in endotoxin avoidance",
+            "Streamlined downstream processing"
+          ]
+        }
+      },
+      {
+        "id": "cta",
+        "purpose": "Collect high-intent leads for pilot/demo",
+        "copy": {
+          "headline": "Partner with Cell Forge",
+          "supporting": "From pilot runs to full-scale manufacturing, we help you bring cleaner, safer proteins to market—faster.",
+          "bullets": [
+            "Process development",
+            "Analytical support",
+            "Tech transfer"
+          ]
+        },
+        "form": {
+          "fields": [
+            { "name": "name", "type": "text", "label": "Name", "required": true },
+            { "name": "company", "type": "text", "label": "Company", "required": false },
+            { "name": "email", "type": "email", "label": "Email", "required": true },
+            { "name": "message", "type": "textarea", "label": "What would you like to make?", "required": false }
+          ],
+          "submit": {
+            "label": "Request a demo",
+            "action": "mailto",
+            "to": "hello@cellforge.bio",
+            "subject": "Cell Forge Demo Request",
+            "serialization": "URLSearchParams(FormData)"
+          },
+          "privacy": {
+            "sla": "Response within 1–2 business days"
+          }
+        },
+        "visualTreatment": {
+          "container": "dark gradient frame with white inner card",
+          "elevation": "shadow-xl",
+          "border": "subtle ring on inner card"
+        }
+      }
+    ]
+  },
+  "interactions": {
+    "hover": {
+      "featureCards": "increase shadow; reveal gradient layer; icon remains on gradient badge"
+    },
+    "focus": {
+      "inputs": "high-contrast ring and border for accessibility"
+    },
+    "scroll": {
+      "navbar": "sticky, translucent background persists with border"
+    }
+  },
+  "responsiveness": {
+    "breakpoints": ["sm", "md", "lg"],
+    "rules": [
+      "Navigation links collapse below md; only brand + primary CTA kept visible as needed",
+      "Hero headline scales from 5xl to 6xl at sm+",
+      "Features grid: 1 -> 2 -> 4 columns by breakpoint",
+      "CTA form uses two columns at sm+, single column on small screens"
+    ]
+  },
+  "accessibility": {
+    "landmarks": ["header", "main", "section"],
+    "colorContrast": "Text over gradients maintains AA contrast",
+    "keyboard": "All interactive elements reachable via tab order",
+    "aria": {
+      "hero": "aria-label provided for 3D hero section"
+    }
+  },
+  "performance": {
+    "imagePolicy": "Use CSS gradients and Spline; avoid heavy raster images",
+    "spline": "Keep as background; avoid blocking overlays; no negative z-index"
+  },
+  "testing": {
+    "smoke": [
+      "Header is sticky and visible on scroll",
+      "Spline renders full-bleed and remains interactive",
+      "Clicking 'Explore the platform' scrolls to features",
+      "Submitting CTA opens default mail client with prefilled subject and body"
+    ]
+  }
+}
