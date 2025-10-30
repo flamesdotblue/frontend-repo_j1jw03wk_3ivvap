@@ -2,9 +2,9 @@ import Spline from '@splinetool/react-spline'
 
 export default function Hero() {
   return (
-    <section className="relative h-[88vh] w-full overflow-hidden" aria-label="Cell Forge DNA hero">
+    <section className="relative h-[88vh] w-full overflow-hidden" aria-label="Cell Forge 3D hero">
       <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/mWY-FNsBVpRvZHS5/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+        <Spline scene="https://prod.spline.design/LU2mWMPbF3Qi1Qxh/scene.splinecode" style={{ width: '100%', height: '100%' }} />
       </div>
 
       {/* Subtle radial highlight and gradient tint over the scene (won't block pointer events) */}
