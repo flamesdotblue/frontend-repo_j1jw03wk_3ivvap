@@ -5,7 +5,7 @@ import CTA from './components/CTA.jsx'
 
 function App() {
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-[#0b1020] text-gray-100 antialiased">
       <Navbar />
       <main>
         <Hero />
